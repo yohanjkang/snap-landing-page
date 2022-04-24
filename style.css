@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+html {
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(0deg, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  font-family: "Epilogue", sans-serif;
+  color: hsl(0deg, 0%, 8%);
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+nav {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 41%);
+  padding: 1.25rem 2rem;
+}
+
+.nav-links {
+  display: inherit;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.open-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.open-nav .nav-menu {
+  cursor: default;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25em;
+  border-radius: 0.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.75em;
+  box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.15), 4px 4px 20px 8px rgba(0, 0, 0, 0.05);
+  top: calc(100% + 1rem);
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+.open-nav .nav-menu.features {
+  left: auto;
+  right: 0;
+}
+.open-nav.open .nav-menu {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+.nav-menu-item {
+  cursor: pointer;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-menu-item__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+}
+
+.login-links {
+  display: inherit;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.login-link {
+  cursor: pointer;
+}
+.login-link:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.login-link:last-of-type {
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 0.75em;
+  padding: 0.75em 1em;
+}
+.login-link:last-of-type:hover {
+  border: 2px solid hsl(0deg, 0%, 8%);
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 70%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-image {
+  height: 75vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: auto;
+}
+.hero-content h1 {
+  font-size: 4.5rem;
+}
+.hero-content p {
+  color: hsl(0deg, 0%, 41%);
+  width: 75%;
+}
+.hero-content button {
+  cursor: pointer;
+  background: hsl(0deg, 0%, 8%);
+  border: 2px solid transparent;
+  border-radius: 0.5em;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: 700;
+  font-size: 1.25rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5em 0.75em;
+  transition: all 0.2s ease-in-out;
+}
+.hero-content button:hover {
+  background: hsl(0deg, 0%, 98%);
+  border: 2px solid hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

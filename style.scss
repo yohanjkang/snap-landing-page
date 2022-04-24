@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+// COLORS
+$offWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$offBlack: hsl(0, 0%, 8%);
+
+html {
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $offWhite;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Epilogue", sans-serif;
+  color: $offBlack;
+
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+// NAVBAR
+nav {
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  font-size: 1rem;
+  color: $mediumGray;
+
+  padding: 1.25rem 2rem;
+}
+
+.nav-links {
+  display: inherit;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  cursor: pointer;
+
+  &:hover {
+    color: $offBlack;
+  }
+}
+
+.open-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  .nav-menu {
+    cursor: default;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25em;
+
+    border-radius: 0.5em;
+
+    width: max-content;
+
+    padding: 1.75em;
+
+    box-shadow: 4px 4px 10px 4px rgba($color: #000000, $alpha: 0.15),
+      4px 4px 20px 8px rgba($color: #000000, $alpha: 0.05);
+
+    top: calc(100% + 1rem);
+    left: 0;
+
+    transition: all 0.2s ease-in-out;
+
+    &.features {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  //   &::after {
+  //     content: "";
+  //     display: inline-block;
+  //     background-image: url("./images/icon-arrow-down.svg");
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+
+  //     width: 12px;
+  //     height: 12px;
+  //   }
+
+  &.open {
+    // &::after {
+    //   content: "";
+    //   display: inline-block;
+    //   background-image: url("./images/icon-arrow-up.svg");
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+
+    //   width: 12px;
+    //   height: 12px;
+    // }
+
+    .nav-menu {
+      opacity: 100%;
+      pointer-events: all;
+    }
+  }
+}
+
+.nav-menu-item {
+  cursor: pointer;
+
+  display: flex;
+  gap: 1em;
+}
+
+.nav-menu-item__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+}
+
+.login-links {
+  display: inherit;
+  align-items: center;
+  gap: 2rem;
+
+  margin-left: auto;
+}
+
+.login-link {
+  cursor: pointer;
+
+  &:hover {
+    color: $offBlack;
+  }
+
+  &:last-of-type {
+    border: 2px solid $mediumGray;
+    border-radius: 0.75em;
+
+    padding: 0.75em 1em;
+
+    &:hover {
+      border: 2px solid $offBlack;
+    }
+  }
+}
+// END NAVBAR
+
+// MAIN CONTENT
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  height: min-content;
+  width: 70%;
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.main-image {
+  height: 75vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  margin: auto;
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  p {
+    color: $mediumGray;
+
+    width: 75%;
+  }
+
+  button {
+    cursor: pointer;
+    background: $offBlack;
+
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+
+    color: $offWhite;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    width: fit-content;
+
+    padding: 0.5em 0.75em;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: $offWhite;
+
+      border: 2px solid $offBlack;
+
+      color: $offBlack;
+    }
+  }
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+// END MAIN CONTENT
+
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+}

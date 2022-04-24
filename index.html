@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <img class="logo" src="./images/logo.svg" alt="Snap Logo" />
+
+      <!-- NAVBAR LINKS -->
+      <div class="nav-links">
+        <div class="nav-link open-nav">
+          <p class="nav-menu-open-link">Features</p>
+          <div class="nav-menu features">
+            <div class="nav-menu-item">
+              <div class="nav-menu-item__image-container">
+                <img src="./images/icon-todo.svg" alt="Todo Icon" />
+              </div>
+              Todo List
+            </div>
+            <div class="nav-menu-item">
+              <div class="nav-menu-item__image-container">
+                <img src="./images/icon-calendar.svg" alt="Calendar Icon" />
+              </div>
+              Calendar
+            </div>
+            <div class="nav-menu-item">
+              <div class="nav-menu-item__image-container">
+                <img src="./images/icon-reminders.svg" alt="Bell Icon" />
+              </div>
+              Reminders
+            </div>
+            <div class="nav-menu-item">
+              <div class="nav-menu-item__image-container">
+                <img src="./images/icon-planning.svg" alt="Planner Icon" />
+              </div>
+              Planning
+            </div>
+          </div>
+        </div>
+        <div class="nav-link open-nav">
+          <p class="nav-menu-open-link">Company</p>
+          <div class="nav-menu closed">
+            <div class="nav-menu-item">History</div>
+            <div class="nav-menu-item">Our Team</div>
+            <div class="nav-menu-item">Blog</div>
+          </div>
+        </div>
+        <div class="nav-link">Careers</div>
+        <div class="nav-link">About</div>
+      </div>
+      <!-- END NAVBAR LINKS -->
+
+      <!-- LOGIN LINKS -->
+      <div class="login-links">
+        <div class="login-link">Login</div>
+        <div class="login-link">Register</div>
+      </div>
+      <!-- END LOGIN LINKS -->
+    </nav>
+    <!-- END NAVBAR -->
+
+    <main>
+      <img
+        src="./images/image-hero-desktop.png"
+        alt="Hero Image"
+        class="main-image"
+      />
+
+      <!-- MAIN TEXT -->
+      <div class="main-content">
+        <div class="hero-content">
+          <h1>
+            Make<br />
+            remote work
+          </h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button>Learn more</button>
+        </div>
+        <!-- END MAIN TEXT -->
+
+        <!-- CLIENT LOGOS -->
+        <div class="clients">
+          <img
+            src="./images/client-databiz.svg"
+            alt="Databiz Logo"
+            class="client"
+          />
+          <img
+            src="./images/client-audiophile.svg"
+            alt="Audiophile Logo"
+            class="client"
+          />
+          <img src="./images/client-meet.svg" alt="Meet Logo" class="client" />
+          <img
+            src="./images/client-maker.svg"
+            alt="Maker Logo"
+            class="client"
+          />
+        </div>
+        <!-- END CLIENT LOGOS -->
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
